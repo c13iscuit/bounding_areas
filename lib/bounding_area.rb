@@ -1,13 +1,13 @@
 class BoundingArea
-  def initialize(array)
-    @array = array
+  def initialize(boxes)
+    @boxes = boxes
   end
 
   def contains_point?(x, y)
-    if @array.length == 0
+    if @boxes.length == 0
       false
     else
-      @array.each do |box|
+      @boxes.each do |box|
         if box.contains_point?(x, y)
           return true
         else
